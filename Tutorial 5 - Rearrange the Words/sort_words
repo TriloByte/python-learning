@@ -1,28 +1,25 @@
-sentence = "The lines are printed in reverse order."
-# remove last character
-sentence = sentence[:-1]
-print(sentence)
+def sort_words(sentence):
+    # remove last character
+    sentence = sentence[:-1]
+    print(sentence)
+    # lowercase all the letters in the sentence
+    sentence = sentence.lower()
+    print(sentence)
+    # get each word in the sentence
+    words_in_sentence = sentence.split(' ')
+    print(words_in_sentence)
+    # sort the words by the length of the words
+    words_in_sentence.sort(key=len)
+    print(words_in_sentence)
+    # join the words with a space
+    sentence = ' '.join(words_in_sentence)
+    print(sentence)
+    # Append a period at the end of the sentence
+    sentence = sentence + '.'
+    print(sentence)
+    # Uppercase the first letter
+    sentence = sentence.capitalize()
+    print(sentence)
 
-# lowercase all the letters in the sentence
-sentence = sentence.lower()
-print(sentence)
 
-# get each word in the sentence
-words_in_sentence = sentence.split(' ')
-print(words_in_sentence)
-
-# sort the words by the length of the words
-words_in_sentence.sort(key=len)
-print(words_in_sentence)
-
-# join the words with a space
-sentence = ' '.join(words_in_sentence)
-print(sentence)
-
-# Append a period at the end of the sentence
-sentence = sentence + '.'
-print(sentence)
-
-# Uppercase the first letter
-sentence = sentence.capitalize()
-print(sentence)
+sort_words("The lines are printed in reverse order.")
